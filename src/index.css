@@ -12,3 +12,19 @@
   font-family: "Shadows Into Light", cursive;
   font-weight: bolder;
 }
+
+@layer components {
+  .formBtn {
+    @apply py-4 w-full md:w-1/2 bg-black text-white rounded-full mt-8 font-bold text-lg;
+    @apply disabled:bg-black/20 disabled:font-semibold disabled:text-lg;
+  }
+  .headingCursive {
+    @apply font-cursive text-xl md:text-3xl tracking-wider text-green-600 text-center;
+  }
+  .columnFlex {
+    @apply flex flex-col items-center;
+  }
+  .whFull {
+    @apply h-full w-full;
+  }
+}
