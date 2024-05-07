@@ -4,10 +4,12 @@ import { useRecoilState } from "recoil";
 import { z } from "zod";
 import { useState } from "react";
 import { MdOutlineError } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const RegistrationForm = () => {
   const [register, setRegister] = useRecoilState(registerAtom);
-  const [error, setError] = useState(false);
+  const [isError, setError] = useState(false);
+  const navigate = useNavigate();
 
   const handleNameChange = (e) => {
     setRegister((prev) => ({ ...prev, name: e.target.value }));
@@ -19,6 +21,8 @@ const RegistrationForm = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     setError(false);
+
+    // Email validation using zod
     const emailSchema = z.string().email();
 
     const form = new FormData(registerForm);
@@ -27,7 +31,8 @@ const RegistrationForm = () => {
       formData[key] = value;
     }
     try {
-      const email = emailSchema.parse(formData.email);
+      emailSchema.parse(formData.email);
+      navigate("/success");
     } catch (error) {
       setError(true);
     }
@@ -58,7 +63,9 @@ const RegistrationForm = () => {
             defaultValue={register.email}
             onchange={handleEmailChange}
           />
-          {error && (
+
+          {/* Error for invalid email */}
+          {isError && (
             <p className="text-red-500 font-semibold mt-2">
               <MdOutlineError className="inline-block mr-1" />
               Enter a valid email address
