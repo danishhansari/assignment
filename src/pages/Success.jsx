@@ -1,6 +1,29 @@
 import Navbar from "../components/Navbar";
 import checkMark from "../assets/check.png";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { registerAtom } from "../states/atom";
+import { useResetRecoilState } from "recoil";
+import { useState } from "react";
 const Success = () => {
+  const navigate = useNavigate();
+  const [count, setCount] = useState(5);
+  const setRegister = useResetRecoilState(registerAtom);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (count < 1) {
+        navigate("/");
+      }
+      setCount((prev) => prev - 1);
+    }, 1000);
+
+    return () => {
+      setRegister;
+      clearTimeout(timeout);
+    };
+  }, [count]);
+
   return (
     <>
       <div className="navAndPage">
@@ -17,7 +40,7 @@ const Success = () => {
           </p>
           <p className="text-[#727272] absolute bottom-6 text-center">
             Redirecting you to Homepage in
-            <b className="text-[#1C1C1C]"> 5 Seconds</b>
+            <b className="text-[#1C1C1C]"> {count} Seconds</b>
           </p>
         </div>
       </div>
