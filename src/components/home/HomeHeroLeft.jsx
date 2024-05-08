@@ -1,9 +1,9 @@
 import { lazy } from "react";
 import girlImg from "../../assets/girl.png";
+const AchievementWidget = lazy(() => import("./widgets/AchievementWidget"));
 const StaffDeploymentWidget = lazy(() =>
   import("./widgets/StaffDeploymentWidget")
 );
-const AchievementWidget = lazy(() => import("./widgets/AchievementWidget"));
 const MillionWidget = lazy(() => import("./widgets/MillionWidget"));
 
 const HomeHeroLeft = () => {

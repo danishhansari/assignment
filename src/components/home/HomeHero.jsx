@@ -1,5 +1,5 @@
 import HomeHeroLeft from "./HomeHeroLeft";
-
+import HomeHeroRight from "./HomeHeroRight";
 const HomeHero = () => {
   return (
     <>
@@ -11,13 +11,9 @@ const HomeHero = () => {
           </h1>
         </div>
 
-        <div className="flex columnFlex md:flex-row md:items-start md:justify-center w-full md:w-11/12 mx-auto gap-4">
+        <div className="flex columnFlex md:flex-row w-full md:w-11/12 mx-auto justify-center md:items-start gap-8 mt-8 md:mt-12">
           <HomeHeroLeft />
-          <div>
-            <h2 className="text-2xl font-medium">
-              Enhance fortune 50 company's insights teams research capabilities
-            </h2>
-          </div>
+          <HomeHeroRight />
         </div>
       </div>
     </>

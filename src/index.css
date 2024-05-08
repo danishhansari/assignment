@@ -11,7 +11,39 @@
 .font-cursive {
   font-family: "Covered By Your Grace", cursive;
 }
-
+.animate-alternate {
+  animation: animate-alternate 2s ease-in infinite alternate;
+}
+.animate-top {
+  animation: animate-top 2s ease-in infinite alternate;
+}
+.animate {
+  animation: animate 2s ease-in infinite alternate;
+}
+@keyframes animate {
+  from {
+    transform: translate(0px);
+  }
+  to {
+    transform: translate(6px);
+  }
+}
+@keyframes animate-top {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(6px);
+  }
+}
+@keyframes animate-alternate {
+  from {
+    transform: translate(0px);
+  }
+  to {
+    transform: translate(-6px);
+  }
+}
 @layer components {
   .navAndPage {
     @apply max-h-screen bg-white text-black w-full px-[2vw] py-2 md:py-4;
