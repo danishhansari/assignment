@@ -7,7 +7,9 @@ const Home = () => {
     <>
       <div className="p-2 md:p-4">
         <HomeNav />
-        <HomeHero />
+        <div className="px-0 md:px-[6vw]">
+          <HomeHero />
+        </div>
         <HomeFooter />
       </div>
     </>
