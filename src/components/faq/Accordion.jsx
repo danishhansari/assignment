@@ -1,7 +1,8 @@
 import { FiPlus, FiMinus } from "react-icons/fi";
-const Accordion = ({ toggleAccordion, isOpen, title, data }) => {
+
+const Accordion = ({ toggleAccordion, isOpen, question, answer }) => {
   return (
-    <div className="mb-1 w-11/12 p-2 md:p-4 mt-2">
+    <div className="w-full md:w-11/12 py-2 px-4 my-2">
       <button
         className={`w-full text-left transition-all duration-300 flex justify-between ${
           !isOpen ? "border-b" : ""
@@ -9,15 +10,15 @@ const Accordion = ({ toggleAccordion, isOpen, title, data }) => {
         onClick={toggleAccordion}
       >
         <p className="text-md md:text-xl font-medium transition-all pb-4">
-          {title}
+          {question}
         </p>
         <span className="transition-all transform origin-bottom">
-          {isOpen ? <FiMinus size={25} /> : <FiPlus size={25} />}
+          {isOpen ? <FiMinus size={20} /> : <FiPlus size={20} />}
         </span>
       </button>
       {isOpen && (
         <div className="pb-4 border-b border-[#dfe2de] text-[#617275] transition-all leading-tighter">
-          {data}
+          {answer}
         </div>
       )}
     </div>

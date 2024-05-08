@@ -4,7 +4,7 @@ import { GoDotFill } from "react-icons/go";
 const HomeHeroRight = () => {
   return (
     <div className="mt-8 md:mt-24">
-      <h2 className="text-2xl md:text-4xl font-medium w-full md:w-2/3 leading-tight md:leading-0">
+      <h2 className="text-2xl md:text-4xl font-semibold w-full md:w-2/3 leading-tight md:leading-0">
         Enhance fortune 50 company's insights teams research capabilities
       </h2>
       <div className="flex mt-12 mb-4">

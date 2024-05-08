@@ -2,7 +2,7 @@ import { lazy } from "react";
 const HomeNav = lazy(() => import("../components/home/HomeNav"));
 const HomeHero = lazy(() => import("../components/home/HomeHero"));
 const HomeFooter = lazy(() => import("../components/home/HomeFooter"));
-import Faq from "../components/Faq";
+const HomeFaq = lazy(() => import("../components/faq/HomeFaq"));
 const Home = () => {
   return (
     <>
@@ -11,8 +11,7 @@ const Home = () => {
         <div className="md:px-[6vw]">
           <HomeHero />
         </div>
-        <Faq />
-
+        <HomeFaq />
         <HomeFooter />
       </div>
     </>

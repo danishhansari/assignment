@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import closeBtnIcon from "../assets/closeBtn.png";
 
+// This is Navbar is for RegisterPage
 const Navbar = ({ closeBtn }) => {
   return (
     <nav className="flex justify-between items-center p-2 rounded-full">
