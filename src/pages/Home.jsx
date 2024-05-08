@@ -1,7 +1,12 @@
+import HomeNav from "../components/home/HomeNav";
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <div className="p-2 md:p-4">
+        <HomeNav />
+      </div>
+    </>
+  );
+};
 
-export default Home
+export default Home;

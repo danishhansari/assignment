@@ -16,6 +16,12 @@
   .navAndPage {
     @apply max-h-screen bg-white text-black w-full px-[2vw] py-2 md:py-4;
   }
+  .btnPrimary {
+    @apply bg-[#1C1C1C] text-white font-medium  rounded-full hover:bg-[#4E4E4E] transition-colors md:text-lg py-2 px-4 md:py-4 md:px-8;
+  }
+  .btnSecondary {
+    @apply text-black font-medium rounded-full border bg-white hover:bg-[#f1f1f1]  border-[#eaeaea] md:text-lg transition-colors py-2 px-4 md:py-4 md:px-8;
+  }
   .formBtn {
     @apply py-4 w-full md:w-1/2 bg-black text-white rounded-full mt-8 font-bold text-lg;
     @apply disabled:bg-black/20 disabled:font-semibold disabled:text-lg;

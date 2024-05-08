@@ -29,7 +29,7 @@ const Success = () => {
     <>
       <div className="navAndPage">
         <Navbar />
-        {count >= 0 && <Confetti />}
+        {count >= 0 && <Confetti numberOfPieces={130} />}
         <div className="h-full max-w-[900px] w-full mx-auto flex flex-col items-center mt-32 md:mt-44">
           <img src={checkMark} className="w-16 md:w-20" alt="checkmark" />
           <h2 className="headingCursive mt-2 md:mt-4">success submitted</h2>
